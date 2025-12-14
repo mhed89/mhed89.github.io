@@ -1,0 +1,29 @@
+/* CSS Custom Properties (Variables) */
+:root {
+  /* Colors */
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #6b6b6b;
+  --accent: #2d9b9b;
+  --card-border: #eaeaea;
+
+  /* Typography */
+  --mono:
+    "Google Sans Code", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    "Courier New", monospace;
+  --sans:
+    "Google Sans Flex", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --serif: "Domine", Georgia, "Times New Roman", serif;
+
+  /* Layout */
+  --max-width: 720px;
+  --radius: 10px;
+
+  /* Spacing scale (future-proof) */
+  --space-xs: 6px;
+  --space-sm: 12px;
+  --space-md: 18px;
+  --space-lg: 30px;
+  --space-xl: 60px;
+}

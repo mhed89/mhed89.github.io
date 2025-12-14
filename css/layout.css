@@ -1,0 +1,100 @@
+/* Layout primitives */
+.wrap {
+  max-width: var(--max-width);
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Header with CSS Nesting */
+.site-header {
+  border-bottom: 1px solid var(--card-border);
+  background: transparent;
+
+  & .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+  }
+}
+
+.logo {
+  font-family: var(--sans);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+}
+
+.nav {
+  & a {
+    margin-left: 18px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+
+    &:hover,
+    &:focus {
+      color: var(--accent);
+      outline: none;
+    }
+  }
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--card-border);
+  margin-top: 60px;
+  padding: 20px 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Hero section with CSS Nesting */
+.hero {
+  margin-top: 6px;
+}
+
+.site-title {
+  font-family: var(--sans);
+  font-optical-sizing: auto;
+  font-size: 28px;
+  margin: 0 0 6px 0;
+}
+
+.site-lead {
+  color: var(--muted);
+  margin: 0 0 20px 0;
+}
+
+/* Article layout */
+.article {
+  margin-top: 8px;
+}
+
+.article h1 {
+  font-family: var(--sans);
+  font-optical-sizing: auto;
+  font-size: 28px;
+  margin: 0 0 6px;
+}
+
+.lead {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+/* Intro section */
+.intro {
+  margin-bottom: 30px;
+}
+
+/* Section heading */
+.section-heading {
+  font-family: var(--sans);
+  font-optical-sizing: auto;
+  font-size: 16px;
+  margin: 30px 0 10px;
+}

@@ -1,0 +1,16 @@
+/* Responsive breakpoints */
+
+@media (max-width: 640px) {
+  .wrap {
+    margin: 24px auto;
+    padding: 0 16px;
+  }
+
+  .site-title {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+}
