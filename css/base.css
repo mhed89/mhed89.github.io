@@ -1,4 +1,3 @@
-/* Base styles & reset */
 * {
   box-sizing: border-box;
 }
@@ -45,7 +44,6 @@ body {
   }
 }
 
-/* Typography defaults */
 h1,
 h2,
 h3,

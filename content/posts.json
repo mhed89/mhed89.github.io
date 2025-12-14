@@ -1,9 +1,1 @@
-[
-  {
-    "title": "Exempel på Markdown-inlägg",
-    "url": "/blog/example-markdown-post.html",
-    "date": "2025-12-14",
-    "tags": ["markdown", "tutorial", "mermaid"],
-    "excerpt": "Ett exempel på hur du kan skriva inlägg i ren markdown med stöd för Mermaid-diagram, kodblock, tabeller och mer."
-  }
-]
+[]

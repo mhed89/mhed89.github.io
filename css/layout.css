@@ -5,7 +5,6 @@
   padding: 0 20px;
 }
 
-/* Header with CSS Nesting */
 .site-header {
   border-bottom: 1px solid var(--card-border);
   background: transparent;
@@ -43,7 +42,6 @@
   }
 }
 
-/* Footer */
 .site-footer {
   border-top: 1px solid var(--card-border);
   margin-top: 60px;
@@ -52,7 +50,6 @@
   text-align: center;
 }
 
-/* Hero section with CSS Nesting */
 .hero {
   margin-top: 6px;
 }
@@ -69,7 +66,6 @@
   margin: 0 0 20px 0;
 }
 
-/* Article layout */
 .article {
   margin-top: 8px;
 }
@@ -86,12 +82,10 @@
   margin-bottom: 12px;
 }
 
-/* Intro section */
 .intro {
   margin-bottom: 30px;
 }
 
-/* Section heading */
 .section-heading {
   font-family: var(--sans);
   font-optical-sizing: auto;

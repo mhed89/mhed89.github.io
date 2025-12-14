@@ -1,16 +1,14 @@
-/* Main stylesheet - imports all CSS modules */
-
-/* 1. Variables - CSS custom properties */
+/* Variables */
 @import url("./variables.css");
 
-/* 2. Base - reset and element defaults */
+/* Base */
 @import url("./base.css");
 
-/* 3. Layout - structural components */
+/* Layout */
 @import url("./layout.css");
 
-/* 4. Components - reusable UI elements */
+/* Components */
 @import url("./components.css");
 
-/* 5. Responsive - media queries */
+/* Responsive */
 @import url("./responsive.css");

@@ -1,4 +1,3 @@
-/* CSS Custom Properties (Variables) */
 :root {
   /* Colors */
   --bg: #ffffff;
@@ -20,7 +19,7 @@
   --max-width: 720px;
   --radius: 10px;
 
-  /* Spacing scale (future-proof) */
+  /* Spacing scale */
   --space-xs: 6px;
   --space-sm: 12px;
   --space-md: 18px;

@@ -1,5 +1,3 @@
-/* Responsive breakpoints */
-
 @media (max-width: 640px) {
   .wrap {
     margin: 24px auto;

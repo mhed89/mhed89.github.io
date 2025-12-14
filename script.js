@@ -1,9 +1,7 @@
 // Minimal client-side helpers and markdown renderer.
-// Now with Alpine.js integration and dynamic header/footer loading.
 import { marked } from "marked";
 import mermaid from "mermaid";
 
-// Initialize mermaid
 mermaid.initialize({ startOnLoad: false, theme: "default" });
 
 // Load common head tags (fonts, styles, scripts)
@@ -101,7 +99,6 @@ async function renderCombinedPosts(
   if (!container) return;
 
   try {
-    // Fetch all JSON files
     const responses = await Promise.all(
       jsonUrls.map((url) => fetch(url).then((r) => (r.ok ? r.json() : []))),
     );
@@ -135,7 +132,6 @@ async function renderCombinedPosts(
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  // Load header and footer
   loadComponent("#header-placeholder", "/includes/header.html");
   loadComponent("#footer-placeholder", "/includes/footer.html");
 
@@ -259,7 +255,6 @@ if ("navigation" in window) {
         const response = await fetch(url.pathname);
         const html = await response.text();
 
-        // Parse new document
         const parser = new DOMParser();
         const newDoc = parser.parseFromString(html, "text/html");
 

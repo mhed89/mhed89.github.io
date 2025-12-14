@@ -5,7 +5,6 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = join(__dirname, "..");
 
-// Recursive copy function
 function copyRecursive(src, dest) {
   const stat = statSync(src);
   const filename = src.split("/").pop();
@@ -34,7 +33,6 @@ function copyRecursive(src, dest) {
 
 console.log("Copying assets to public folder...\n");
 
-// Copy directories
 const copies = [
   { src: "content", dest: "public/content" },
   { src: "includes", dest: "public/includes" },
