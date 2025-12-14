@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 *.local
+.github/copilot-instructions.md
 
 # README files (except root)
 **/README.md

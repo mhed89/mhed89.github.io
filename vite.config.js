@@ -17,7 +17,6 @@ export default defineConfig({
         blog: resolve(__dirname, "blog.html"),
         projects: resolve(__dirname, "projects.html"),
         knowledge: resolve(__dirname, "knowledge.html"),
-        "example-post": resolve(__dirname, "blog/example-markdown-post.html"),
       },
       output: {
         manualChunks: {
