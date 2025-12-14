@@ -1,7 +1,3 @@
-# mhed89.github.io
-
-Personlig maker-blogg av Markus Hedenborn. Vanilla HTML/CSS/JS med Vite för optimering.
-
 ## Utveckling
 
 ### Installation
