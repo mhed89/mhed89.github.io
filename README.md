@@ -1,1 +1,1 @@
-Detta är en intern mental logg exponerad utan garantier för mig själv för att skriva av mig. Ingen publik förväntad. Har du åsikter om något jag skrivit som du känner dig kränkt av, så är du troligt en högst obegåvad person. Läs på egen risk.
+Detta är en intern mental logg exponerad utan garantier för mig själv för att skriva av mig. Ingen publik förväntad.
