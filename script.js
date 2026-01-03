@@ -131,9 +131,10 @@ async function renderCombinedPosts(
   }
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-  loadComponent("#header-placeholder", "/includes/header.html");
-  loadComponent("#footer-placeholder", "/includes/footer.html");
+// Initialize page content - called on DOMContentLoaded and after navigation
+async function initializePage() {
+  await loadComponent("#header-placeholder", "/includes/header.html");
+  await loadComponent("#footer-placeholder", "/includes/footer.html");
 
   // Set footer year (fallback if footer already exists in page)
   const y = document.getElementById("year");
@@ -150,14 +151,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (jsonUrls) {
       // Multiple sources (for homepage)
-      renderCombinedPosts(
+      await renderCombinedPosts(
         ".post-list",
         jsonUrls.split(",").map((url) => url.trim()),
         maxPosts ? parseInt(maxPosts) : null,
       );
     } else if (jsonUrl) {
       // Single source (for blog page)
-      renderPosts(".post-list", jsonUrl, maxPosts ? parseInt(maxPosts) : null);
+      await renderPosts(".post-list", jsonUrl, maxPosts ? parseInt(maxPosts) : null);
     }
   }
 
@@ -165,13 +166,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (document.querySelector(".projects-grid[data-json]")) {
     const grid = document.querySelector(".projects-grid[data-json]");
     const jsonUrl = grid.getAttribute("data-json");
-    renderPosts(".projects-grid[data-json]", jsonUrl);
+    await renderPosts(".projects-grid[data-json]", jsonUrl);
   }
 
   // If this page has a container .markdown-async that specifies data-src, fetch and render it.
-  document.querySelectorAll(".markdown-async[data-src]").forEach(async (el) => {
+  const asyncElements = document.querySelectorAll(".markdown-async[data-src]");
+  for (const el of asyncElements) {
     const src = el.getAttribute("data-src");
-    if (!src) return;
+    if (!src) continue;
     try {
       const resp = await fetch(src);
       if (!resp.ok) throw new Error("Failed to fetch " + src);
@@ -181,7 +183,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       el.textContent = "Unable to load content.";
       console.error(err);
     }
-  });
+  }
 
   // Handle standalone markdown posts (e.g., blog/my-post.md)
   if (document.querySelector(".markdown-post[data-src]")) {
@@ -199,7 +201,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
   }
-});
+}
+
+document.addEventListener("DOMContentLoaded", initializePage);
 
 // Enhanced markdown renderer using marked.js with Mermaid support
 async function renderMarkdown(md) {
@@ -237,7 +241,7 @@ async function renderMarkdown(md) {
   return `<div class="content">${html}</div>`;
 }
 
-// Navigation API - Enhanced page transitions
+// Navigation API - Enhanced page transitions with direction detection
 if ("navigation" in window) {
   navigation.addEventListener("navigate", (e) => {
     // Only intercept same-origin navigations
@@ -247,6 +251,11 @@ if ("navigation" in window) {
 
     // Skip if external link
     if (url.origin !== location.origin) return;
+
+    // Determine navigation direction
+    const navigationType = e.navigationType;
+    const isBackward = navigationType === "traverse" || navigationType === "back";
+    const isForward = navigationType === "push" || navigationType === "forward";
 
     // Intercept navigation for smooth View Transitions
     e.intercept({
@@ -259,16 +268,29 @@ if ("navigation" in window) {
         const newDoc = parser.parseFromString(html, "text/html");
 
         // Update page content with View Transition
-        if (document.startViewTransition) {
-          document.startViewTransition(() => {
-            document.title = newDoc.title;
-            document.body.innerHTML = newDoc.body.innerHTML;
-          });
-        } else {
-          // Fallback without transition
+        const updateDOM = () => {
           document.title = newDoc.title;
           document.body.innerHTML = newDoc.body.innerHTML;
+        };
+
+        if (document.startViewTransition) {
+          // Apply transition type based on navigation direction
+          const transitionTypes = [];
+          if (isBackward) transitionTypes.push('backward');
+          else if (isForward) transitionTypes.push('forward');
+
+          const transition = document.startViewTransition({
+            update: updateDOM,
+            types: transitionTypes,
+          });
+          
+          await transition.finished;
+        } else {
+          updateDOM();
         }
+        
+        // Re-initialize page after DOM update
+        await initializePage();
       },
     });
   });
