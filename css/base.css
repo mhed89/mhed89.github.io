@@ -19,11 +19,6 @@ body {
   line-height: 1.6;
 }
 
-/* View Transitions API for smooth page navigations */
-@view-transition {
-  navigation: auto;
-}
-
 /* Default root transition - smooth cross-fade with subtle scale */
 ::view-transition-old(root),
 ::view-transition-new(root) {
