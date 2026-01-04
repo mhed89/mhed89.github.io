@@ -254,8 +254,8 @@ if ("navigation" in window) {
 
     // Determine navigation direction
     const navigationType = e.navigationType;
-    const isBackward = navigationType === "traverse" || navigationType === "back";
-    const isForward = navigationType === "push" || navigationType === "forward";
+    const isBackward = navigationType === "traverse";
+    const isForward = navigationType === "push";
 
     // Intercept navigation for smooth View Transitions
     e.intercept({
