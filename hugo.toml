@@ -1,0 +1,29 @@
+baseURL = 'https://mhed89.github.io/'
+languageCode = 'en-us'
+title = 'My Hugo Site'
+theme = 'archie'
+copyright = "© 2026"
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[params]
+  mode = "auto"
+  useCDN = false
+  subtitle = "My personal blog"
+  mainSections = ["posts"]
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
