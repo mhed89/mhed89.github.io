@@ -1,6 +1,6 @@
 baseURL = 'https://mhed89.github.io/'
-languageCode = 'en-us'
-title = 'My Hugo Site'
+languageCode = 'se_sv'
+title = 'Markus Hedenborn'
 theme = 'archie'
 copyright = "© 2026"
 pygmentsstyle = "monokai"
@@ -10,7 +10,7 @@ pygmentscodefencesguesssyntax = true
 [params]
   mode = "auto"
   useCDN = false
-  subtitle = "My personal blog"
+  subtitle = "Hjärndump | Blogg"
   mainSections = ["posts"]
 
 [[menu.main]]
