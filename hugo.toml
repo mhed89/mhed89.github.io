@@ -10,7 +10,7 @@ pygmentscodefencesguesssyntax = true
 [params]
   mode = "light"
   useCDN = false
-  subtitle = "Hjärndump där jag sätter ord på mina tankar & idéer."
+  subtitle = "En hjärndump där jag sätter ord på mina tankar & idéer."
   mainSections = ["posts"]
 
 [[menu.main]]
