@@ -1,20 +1,15 @@
 ---
-title: "My First Post"
+title: "varför?"
 date: 2026-01-12
 draft: false
-description: "Welcome to my blog! This is my first post."
+description: "inlägg #1"
 ---
 
-# Welcome to My Blog
+# init
 
-This is my first blog post using Hugo and the Archie theme. 
+varför detta?
 
-## Getting Started
+Det kan vara skönt att skriva av sig ibland, sätta ord på tankar och idéer, på en plattform som jag själv kontrollerar.
+Jag ska försöka dela med mig av mina erfarenheter inom tech, programmering, webbutveckling och annat som intresserar mig. Framförallt ska jag försöka få ihop inlägg som handlar om mina hobbyprojekt, där jag jobbar med microcontrollers, elektronik, CAD, 3D-printing, och allt runt omkring.
 
-I'm excited to share my thoughts and experiences here. Stay tuned for more content!
-
-### What's Next?
-
-- More blog posts
-- Tutorials
-- Project updates
+Jag skriver inte för att jag förväntar mig att någon ska läsa det, så tar du illa upp av någonting jag skriver är du välkommen att hålla käften.

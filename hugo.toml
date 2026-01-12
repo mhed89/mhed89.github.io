@@ -1,5 +1,5 @@
 baseURL = 'https://mhed89.github.io/'
-languageCode = 'se_sv'
+languageCode = 'sv'
 title = 'Markus Hedenborn'
 theme = 'archie'
 copyright = "© 2026"
@@ -8,22 +8,22 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 [params]
-  mode = "auto"
+  mode = "light"
   useCDN = false
-  subtitle = "Hjärndump | Blogg"
+  subtitle = "Hjärndump där jag sätter ord på mina tankar & idéer."
   mainSections = ["posts"]
 
 [[menu.main]]
-name = "Home"
+name = "Hem"
 url = "/"
 weight = 1
 
 [[menu.main]]
-name = "Posts"
+name = "Inlägg"
 url = "/posts"
 weight = 2
 
 [[menu.main]]
-name = "About"
+name = "Om"
 url = "/about"
 weight = 3

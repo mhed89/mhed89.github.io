@@ -1,8 +1,8 @@
 ---
-title: "About"
+title: "Om"
 date: 2026-01-12
 ---
 
-# About Me
+# Om Mig
 
-Welcome to my blog built with Hugo and the Archie theme!
+TODO: Skriv om mig själv här när jag blivit intressant.
